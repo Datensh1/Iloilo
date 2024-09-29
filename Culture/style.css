@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background-image: url(bgg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.container h1{
+    padding: 15px 10 px 15 px 20px;
+    text-align: center;
+    color: #f1f1f1;
+}
+
+.line-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.line{
+    width: calc(100% - 40px);
+    height: 2px;
+    background-color: #a3aeb1;
+}
+
+.row .one{
+    padding: 10px;
+    margin: 10px;
+    color: #f1f1f1;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column{
+    flex: calc((100% - 80px)/4);
+    padding: 10px;
+    background-color: #53655c;
+    margin: 10px;
+    color: #f1f1f1;
+}
+
+.column img{
+    width: 100%;
+    float: left;
+}
+
+.card{
+    padding: 16px;
+    text-align: left;
+    background-color: #53655c;
+    float: left;
+}
+
+
+.title{
+    color:#f1f1f1;
+}
+
+.email{
+    font-style: italic;
+}
+button{
+    background-color: #f1f1f1;
+    color: #a3aeb1;
+    border: none;
+    padding: 10px;
+    width: 100%;
+
+}
+
+button:hover{
+    background-color: #e5e8eb;
+    
+}
+
+.vertical{
+    padding: 16px;
+    text-align: left;
+    margin: 10px;
+}
+
+.vertical img{
+    width: 100%;
+    
+}
+
+.vertical p{
+    padding: 10px;
+    color: #f1f1f1;
+}
+
+@media screen and (max-width:900px) {
+.column{
+    flex: calc((100% - 40px)/2);
+}
+
+}
+
+@media screen and (max-width: 600px) {
+    .column{
+        flex:100%;
+    }
+}
+
+.column img:hover{
+  transform: scale(1.1);
+}
+.vertical img:hover{
+    transform: scale(1.1);
+  }
+  
+ 
+

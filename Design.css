@@ -1,0 +1,1047 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+/*----------Header----------*/
+.logo{
+    width: 80px;
+}
+header {    
+    z-index: 999;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;      
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+    transition: 0.3 ease;
+}
+header .logo{
+    margin-left: 80px;
+}
+header .link {
+    position: relative;
+    padding: 10px;
+    margin-right: 100px;
+
+}
+header .link a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+header .link a::before{
+   content: '';
+   width: 100%;
+   height: 0px;
+   background:  gold;
+   position: absolute;
+   z-index: -1;
+   left: 0;
+   bottom: -5px;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
+   transition: height 0.5s;
+}
+header .link a:hover::before{
+   padding-left: 10px 0px;
+   height: 85px;
+   width: 100%;
+}
+
+/*----------Header Arrow/Dots----------*/
+img {
+    width: 100%;
+    height: 100%;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    background: #2c3e50;
+}
+.myslider{
+    height: 760px;
+    display: none;
+    overflow: hidden;
+}
+.prev, .next{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+    transition: 0.1s;
+    user-select: none;
+}
+.prev:hover, .next:hover{
+    color: gold;
+}
+.next{
+    right: 0;
+}
+.dotsbox{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    cursor: pointer;
+}
+.dot{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 3px solid white;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.active, .dot:hover{
+    border-color: gold;
+} 
+
+/*----------Homepage Animation----------*/
+.fade {
+    -webkit-animation: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 0.8;}
+    to {opacity: 1;}
+}
+
+@keyframes fade {
+    from { opacity: 0.8;}
+    to {opacity: 1;}
+}
+.txt {
+    position: absolute;
+    color: white;
+    line-height: 35px;
+    top: 40%;
+    left: 10%;
+    width: 50%;
+    -webkit-animation-name: posi;
+    -webkit-animation-direction: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+@-webkit-keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+
+@keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+
+.txt h1{
+    color: white;
+    font-weight: bold;
+    margin: 20px;
+}
+.txt{
+    font-weight: bold;
+    font-size: 20px;
+}
+.homeb {
+    transform: scale(1.5, 1.5);
+    -webkit-animation-name: zoomin;
+    -moz-animation-duration: 40s;
+    animation-name: zoomin;
+    animation-duration: 40s;
+}
+
+@-webkit-keyframes zoomin {
+    from{transform: scale(1, 1);}
+    to{transform: scale(1.5, 1.5);}
+}
+
+@keyframes zoomin {
+    from{transform: scale(1, 1);}
+    to{transform: scale(1.5, 1.5);}
+}
+
+@media screen and (max-width: 800px) {
+    .myslider{
+        height: 500px;
+    }
+    .txt{
+        line-height: 25px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-animation-name: posi2;
+        -webkit-animation-duration: 2s;
+        animation-name: posi2;
+        animation-duration: 2s;
+    }
+    @-webkit-keyframes posi2 {
+        from{top: 35%;}
+        to{top: 50%;}
+    }
+    @keyframes posi2 {
+        from{top: 35%;}
+        to{top: 50%;}
+    }
+    .txt h1{
+        font-size: 40px;
+    }
+    .txt p{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .txt{
+        font-size: 30px;
+    }
+    .link{
+        font-size: 20px;
+    }
+}
+
+/*----------TextButton HTML----------*/
+
+.textbutton {
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.textbutton:hover {
+    border: 1px solid gold;
+    background-color: gold;
+    transition: 1s;
+}
+/*----------Brand HTML----------*/
+
+.brand{
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    url(Images/back2.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 812px;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+.brand h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 600;
+}
+.brand p {
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    padding: 10px;
+}
+.rows {
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+}
+.brandcol {
+    flex-basis: 25%;
+    background: lightgoldenrodyellow;
+    border-radius: 20px;
+    margin-bottom: 5%;
+    padding: 30px 10px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: default;
+    margin: 60px
+}
+.brandcol {
+    text-align: center;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.brandcol:hover {
+    box-shadow: 0 0 20px 0px gold;
+}
+.brand img{
+    width: 70px;
+    height: 60px;
+
+}
+
+/*----------Eximage HTML----------*/
+
+.eximage {
+    width: 80%;
+    height: 812px;
+    margin: auto;
+    text-align: center;
+    padding: 50px;
+    justify-content: space-between;
+    
+}
+.eximage h1 {
+    margin-bottom: 5%;
+    
+}
+
+/*----------ImageCol HTML----------*/
+
+.imagecol {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.imagecol img {
+    width: 100%;
+    display: block;
+}
+
+/*----------Layer HTML----------*/
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.layer h3 {
+    color: white;
+    font-weight: 500px;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+.layer:hover {
+    background: rgba(128, 128, 128,0.7);
+}
+
+/*----------Blog----------*/
+#news-feed{
+    background: rgba(0, 0, 0, 0.884);
+}
+.newsInfo{
+    display: flex;
+} 
+.news-item{
+    flex-basis: 40%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    padding: 10px;
+    width: 30%;
+}
+
+#news-feed img{
+    border: 5px solid goldenrod;
+    border-radius: 15px;
+    background-size: contain;
+    width: 590px;
+    height: 400px;
+}
+.news-text{
+    background: gold;
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    padding: 20px;
+}
+.news-text p{
+    padding-top: 10px;
+}
+#news-feed h2 {
+    padding-top: 50px;
+    padding-left: 10%;
+    color: gold;
+    font-size: 40px;
+}
+.readbox{
+    padding-top: 25px;
+}
+.read-more {
+    margin-top: 20px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 15px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.read-more:hover {
+    border: 1px solid black;
+    background-color: black;
+    color: gold;
+    transition: 1s;
+}
+
+/*----------About HTML----------*/
+
+.aboutb {
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)
+    ),url(Images/backgroundabout.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.aboutcol img {
+    position: absolute;
+    padding-left: 100px;
+    margin-left: 50%;
+    width: 100%;
+    height: 500px;
+}
+.aboutcol {
+    position: absolute;
+    color: black;
+    line-height: 35px;
+    top: 20%;
+    left: 10%;
+    width: 40%;
+    -webkit-animation-name: posi;
+    -webkit-animation-direction: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+@-webkit-keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+
+@keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+
+.abouttext {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.aboutcol {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.aboutcol img {
+    width: 100%;
+}
+.aboutcol h1 {
+    padding-top: 0;
+}
+.aboutcol p {
+    padding: 15px 0px 25px;
+}
+.aboutbtn {
+    border: 1px solid gold;
+    background: transparent;
+    color:gold;
+}
+.aboutbtn:hover {
+    color: white;
+}
+.maploc {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0px
+}
+.maploc iframe {
+    width: 100%;
+}
+.galleryb {
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)
+    ),url(Images/backgroundcollection.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.imgs {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*----------GALLERY----------*/
+/*----------Honda Collection----------*/
+
+.imgbox:hover {
+    width: 300px;
+    cursor: pointer;
+}
+.imgbox {
+    width: 100px;
+    height: 500px;
+    margin-top: 100px;
+    margin: 20px;
+    border-radius: 50px;
+    background: url(Images/h1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+}
+.imgbox:nth-child(2) {
+    background: url(Images/h2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgbox:nth-child(3) {
+    background: url(Images/h3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgbox:nth-child(4) {
+    background: url(Images/h4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgbox:nth-child(5) {
+    background: url(Images/h5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*----------Nissan Collection----------*/
+.margin{
+    margin-top: 150px;
+}
+.title h1{
+    text-align: center;
+}
+.imgs{
+    padding-bottom: 200px;
+}
+.imgboxx:hover {
+    width: 300px;
+    cursor: pointer;
+}
+.imgboxx {
+    width: 100px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(Images/n1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+}
+.imgboxx:nth-child(2) {
+    background: url(Images/n2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgboxx:nth-child(3) {
+    background: url(Images/n3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgboxx:nth-child(4) {
+    background: url(Images/n4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgboxx:nth-child(5) {
+    background: url(Images/n5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*----------Toyota Collection----------*/
+
+.imgboxxx:hover {
+    width: 300px;
+    cursor: pointer;
+}
+.imgboxxx {
+    width: 100px;
+    height: 500px;
+    margin: 10px;
+    border-radius: 50px;
+    background: url(Images/t1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: width 0.5s;
+}
+.imgboxxx:nth-child(2) {
+    background: url(Images/t2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgboxxx:nth-child(3) {
+    background: url(Images/t3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgboxxx:nth-child(4) {
+    background: url(Images/t4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.imgboxxx:nth-child(5) {
+    background: url(Images/t5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.galleryani {
+    position: relative;
+    color: black;
+    left: 0;
+    width: 100%;
+    -webkit-animation-name: posi;
+    -webkit-animation-direction: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+@-webkit-keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+
+@keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+/*----------Footer About HTML----------*/
+.footer1{
+    margin-top: 45%;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 30px;
+    font-size: 13px;
+    line-height: 25px;
+}
+.footer1 h3{
+    padding-bottom: 10px;
+}
+.aboutp{
+    font-size: 9px;
+}
+.botrow{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.botcol{
+    flex-basis: 300px;
+    padding: 10px;
+}
+.botcol .botInfo div{
+    display: flex;
+    align-items: center;
+}
+.botcol .botInfo div span{
+    min-width: 35px;
+    height: 35px;
+    color:  white;
+    background: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.botcol .botInfo div p{
+    color: white;
+    font-size: 1.1em;
+}
+.botcol .botInfo div a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.botcol ul li a:hover{
+    color: gold;
+    padding-left: 10px;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.botcol ul li a{
+    text-decoration: none;
+    color: white;
+}
+.social{
+    margin-top: 10px;
+    display: flex;
+}
+.social li{
+    list-style: none;
+    margin-right: 15px;
+    padding-left: 5px;
+}
+.social li a{
+    color: gold;
+    font-size: 3em;
+    color: white;
+}
+.social li a:hover{
+    color: gold;
+}
+
+/*----------Contact Us HTML----------*/
+.backgroundcontact{
+    background:
+           linear-gradient(
+             rgba(0, 0, 0, 0.7), 
+             rgba(0, 0, 0, 0.7)
+           ),
+           url(Images/backgroundcontactus.jpg);
+
+ background-size: cover; 
+}
+.contactUs{
+    position: relative;
+    width: 100%;
+    padding: 40px 100px;
+}
+.contactUs .titlec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+.contactUs .titlec h2{
+    color: white;
+    margin-top: 100px;
+    font-weight: 500;
+    margin-bottom: 2%;
+}
+.form{
+    grid-area: form;
+}
+.info{
+    grid-area: info;
+}
+.map{
+    grid-area: map;
+}
+.contactbox{
+    padding: 40px;
+    background: white;
+    box-shadow: 0 5px 35px rgba(255, 238, 0, 0.356) ;
+}
+.box{
+    margin-top: 5px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap: 20px;
+}
+.contactbox h3{
+    color: black;
+    font-weight: 500;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Form */
+.formBox{
+    position: relative;
+    width: 100%;
+}
+.formBox .row50{
+    display: flex;
+    gap: 20px;
+}
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+.formBox .row100 .inputBox{
+    width: 100%;  
+}
+.inputBox span{
+    color: gold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+.inputBox input{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid goldenrod;
+}
+.inputBox textarea{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid goldenrod;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+}
+.inputBox input[type="submit"]{
+    background: gold;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+.inputBox::placeholder{
+    color: #2c3e50;
+}
+
+/* Info */
+.infof{
+    background: #2c3e50;
+}
+.infof h3{
+    color: white;
+}
+.infof .infoBox div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1opx;
+}
+.infof .infoBox div span{
+    min-width: 40px;
+    height: 40px;
+    color:  white;
+    background: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.infof .infoBox div p{
+    color: white;
+    font-size: 1.1em;
+}
+.infof .infoBox div a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+.sci{
+    margin-top: 40px;
+    display: flex;
+}
+.sci li{
+    list-style: none;
+    margin-right: 15px;
+}
+.sci li a{
+    color: gold;
+    font-size: 2em;
+    color: white;
+}
+.sci li a:hover{
+    color: gold;
+}
+.map{
+    padding: 0;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+}
+.contactUs {
+    position: relative;
+    color: black;
+    left: 0;
+    width: 100%;
+    -webkit-animation-name: posi;
+    -webkit-animation-direction: 2s;
+    animation-name: posi;
+    animation-duration: 2s;
+    z-index: 1;
+}
+
+@-webkit-keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+
+@keyframes posi {
+    from{left: 25%;}
+    toP{left: 15%;}
+}
+
+/*----------Footer HTML----------*/
+
+.footer {
+    background: #2c3e50;
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+
+}
+.footer h4 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+/*----------Footer HTML----------*/
+footer{
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: #2c3e50;
+    color: white;
+    padding: 50px 0 30px;
+    font-size: 13px;
+    line-height: 25px;
+}
+footer h3{
+    padding-bottom: 10px;
+}
+.aboutp{
+    font-size: 9px;
+}
+.botrow{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.botcol{
+    flex-basis: 300px;
+    padding: 10px;
+}
+.botcol .botInfo div{
+    display: flex;
+    align-items: center;
+}
+.botcol .botInfo div span{
+    min-width: 35px;
+    height: 35px;
+    color:  white;
+    background: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.botcol .botInfo div p{
+    color: white;
+    font-size: 1.1em;
+}
+.botcol .botInfo div a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+.botcol .botInfo div a:hover{
+    color: gold;
+    padding-left: 10px;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.botcol ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.botcol ul li a:hover{
+    color: gold;
+    padding-left: 10px;
+}
+.social{
+    margin-top: 10px;
+    display: flex;
+}
+.social li{
+    list-style: none;
+    margin-right: 15px;
+    padding-left: 5px;
+}
+.social li a{
+    color: gold;
+    font-size: 3em;
+    color: white;
+}
+.social li a:hover{
+    color: gold;
+}

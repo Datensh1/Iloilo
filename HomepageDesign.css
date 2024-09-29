@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}body {
+    background-color: white;
+}
+.header {
+    position: absolute;
+    top: 0%;
+    position: fixed;
+ 
+    height: 100px;
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    z-index: 10;
+   opacity: 1;
+
+}
+.header:hover{
+    background: rgba(176, 159, 149, 0.7);
+    transition: ease-in 100ms;
+}
+.header img{
+    width: 200px;
+    height: 200px;
+    margin-right: 800px;
+}
+.header a{
+    margin-right: 20px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+}
+.header a:after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.header a:hover{
+    color: white;
+}
+.header a:hover:after{
+    width: 100%;
+}
+img{
+    width: 100%;
+    height: 100%;
+
+}
+#bgVideo{
+
+    position: fixed; top: 0; right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    position: fixed;
+    object-fit: cover;
+    
+}
+/*----------Footer HTML----------*/
+footer{
+    width: 100%;
+    position: absolute;
+
+    background: #b09f95;
+    color: white;
+    padding: 50px 0 30px;
+    font-size: 13px;
+    line-height: 25px;
+opacity: 0;}
+footer h3{
+    padding-bottom: 10px;
+}
+.aboutp{
+    font-size: 9px;
+}
+.botrow{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap:wrap ;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.botcol{
+    flex-basis: 300px;
+    padding: 10px;
+}
+.botcol .botInfo div{
+    display: flex;
+    align-items: center;
+}
+.botcol .botInfo div span{
+    min-width: 35px;
+    height: 35px;
+    color:  white;
+    background: #22252b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.botcol .botInfo div p{
+    color: white;
+    font-size: 1.1em;
+}
+.botcol .botInfo div a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+.botcol .botInfo div a:hover{
+    color: #22252b;
+    padding-left: 10px;
+}
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+.botcol ul li a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+.botcol ul li a:hover{
+    color: #22252b;
+    padding-left: 10px;
+}
+.social{
+    margin-top: 10px;
+    display: flex;
+}
+.social li{
+    list-style: none;
+    margin-right: 15px;
+    padding-left: 5px;
+}
+.social li a{
+    color: #22252b;
+    font-size: 3em;
+    color: white;
+}
+.social li a:hover{
+    color: #22252b;
+}
+.copyright{
+    position: absolute;
+  bottom: 0%;
+  opacity: 0.7;
+    z-index: 10;
+    color: white;
+
+    margin-left: 35%;
+}

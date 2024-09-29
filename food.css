@@ -1,0 +1,155 @@
+body{padding-bottom: 1000px;}
+.header {
+    position: absolute;
+    top: 0%;
+    position: fixed;
+    background: rgba(176, 159, 149, 0.7);
+    height: 100px;
+    width: 100%;
+    min-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+    z-index: 10;
+    left: 0%;
+
+}
+.header img{
+    width: 200px;
+    height: 200px;
+    margin-right: 800px;
+}
+.header a{
+    margin-right: 20px;
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+}
+
+.header a:after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.header a:hover{
+    color: white;
+}
+.header a:hover:after{
+    width: 100%;
+}
+
+header .link {
+    position: relative;
+    padding: 10px;
+    margin-right: 100px;
+
+}
+header .link a{
+    position: relative;
+    color: white;
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+header .link a::before{
+   content: '';
+   width: 100%;
+   height: 0px;
+   background:  gold;
+   position: absolute;
+   z-index: -1;
+   left: 0;
+   bottom: -5px;
+   border-bottom-left-radius: 8px;
+   border-bottom-right-radius: 8px;
+   transition: height 0.5s;
+}
+header .link a:hover::before{
+   padding-left: 10px 0px;
+   height: 85px;
+   width: 100%;
+}
+.title-1{
+    color: white;
+    align-items: center;
+    align-self: center;
+    top: 25%;
+    left: 5%;
+    position: absolute;
+    font-size: 80px;
+z-index: 2;
+    font-weight: bold;
+    font-family: 'inknut antiqua';
+}
+
+.text-1{
+    color: white;
+    position: absolute;
+    top: 54%;
+    z-index: 2;
+ font-size: 16px;
+ left: 16%;
+ font-family: 'inknut antiqua';
+ font-weight: 100;
+}
+.text-2{  color: white;
+    position: absolute;
+    top: 60%;
+    z-index: 2;
+ font-size: 16px;
+ left: 17.5%;
+ font-weight: 100;
+ font-family: 'inknut antiqua';}
+.text-3{  color: white;
+    position: absolute;
+    top: 66%;
+    z-index: 2;
+ font-size: 16px;
+ font-weight: 100;
+ left: 45%;
+
+ font-family: 'inknut antiqua';}
+ .title-2{
+    color: #53655C;
+    align-items: center;
+    align-self: center;
+    top: 115%;
+    left: 23%;
+    position: absolute;
+    font-size: 100px;
+z-index: 2;
+    font-weight: bold;
+    font-family: 'inknut antiqua';
+}
+.bg2{position: absolute;
+top:13%;
+z-index: 1;
+filter:brightness(0.8);
+height: 100%;
+bottom: 0%;
+left: 0%;
+right: 0%;
+width: 100%;
+opacity: 1;
+}
+.divider{width: 100%;
+    position: absolute;
+    left: 0%;
+margin-top: 55%;
+height: 100px;
+background-color: #53655C;}
+.bg3{width: 100%;
+    right: 0%;
+    position: absolute;
+top: 160%;}
